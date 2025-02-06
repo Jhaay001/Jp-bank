@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+/* 検索窓用css */
+.mf_finder_searchBox {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.mf_finder_header li.mf_finder_searchBox_suggest_item {
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.mf_finder_header a.mf_finder_searchBox_suggest_link {
+  color: aliceblue;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.mf_finder_header .mf_finder_searchBox_items {
+  padding: 0rem;
+}
+
+.mf_finder_header .mf_finder_searchBox_submit {
+  background: url(../images/h_search_btn.png) no-repeat;
+  color: transparent;
+  border: 0px;
+  width: 40px;
+  height: 25px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.mf_finder_header .mf_finder_searchBox_submit::before {
+  display: none;
+}
+
+.mf_finder_header .mf_finder_searchBox_submit span {
+  display: inline-block;
+  margin: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.mf_finder_searchBox_query_input {
+  padding: 0 .5rem;
+}
+
+.mf_finder_header .mf_finder_searchBox_query_input {
+  width: 199px;
+  height: 23px;
+  background: #fff;
+  border: 1px #999 solid;
+  box-sizing: content-box;
+  color: #666;
+  font-size: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  min-height: auto;
+  margin-right: 3px;
+}
+
+/* 英語版 PC */
+.en_mf_finder_header .mf_finder_searchBox_submit {
+  width: 70px;
+  background: url(../images/en_h_search_btn.png) no-repeat;
+}
+
+/* サステナビリティ PC */
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form {
+  display: inherit;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_query_input {
+  font-size: 1.8rem;
+  width: 100%;
+  height: 50px;
+  max-width: 750px;
+  border: none;
+  outline: none;
+  color: initial;
+  margin-right: 20px;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_query_wrap {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_query_wrap::before {
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url(../images/common_search_icon.png) no-repeat;
+  background-size: 38px 38px;
+  background-position: 0 6px;
+  margin-right: 46px;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_submit {
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+  font-size: 1.8rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 16px;
+  background: #009900;
+  color: #fff;
+  line-height: 1;
+  transition: .3s;
+  border: none;
+  box-sizing: border-box;
+  text-indent: inherit;
+  border-radius: inherit;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_submit span {
+  display: block;
+  margin: 0;
+  text-indent: initial;
+  overflow: initial;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_suggest_items {
+  top: 50px;
+}
+
+
+@media screen and (max-width: 479px) {
+/* SP共通 */
+#h_search .mf_finder_searchBox_items {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.mf_finder_header .mf_finder_searchBox_submit {
+  width: 60px;
+  height: 30px;
+  background: url(../images/h_search_btn_spi.png) no-repeat;
+  background-size: 60px 30px;
+  border-radius: 0;
+}
+
+.mf_finder_searchBox_query_wrap {
+  flex-grow: 0;
+}
+
+.mf_finder_header .mf_finder_searchBox_query_input {
+  width: 228px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+/* 英語版 SP */
+.en_mf_finder_header .mf_finder_searchBox_query_input {
+  width: 199px;
+  height: 42px;
+}
+
+.en_mf_finder_header .mf_finder_searchBox_submit {
+  width: 75px;
+  height: 44px;
+  background: url(../images/en_h_search_btn_spi.png) no-repeat;
+  background-size: 75px 44px;
+}
+}
+
+@media screen and (max-width: 768px) {
+/* 検索窓幅狭 */
+#header_utility .mf_finder_header,
+#h_sp_menu .en_mf_finder_header {
+  width: auto;
+}
+}
+
+
+@media screen and (max-width: 767px) {
+/* サステナビリティ SP */
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_items {
+  justify-content: space-between;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_query_input {
+  font-size: 1.6rem;
+  width: 100%;
+  height: 40px;
+  margin-right: 10px;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_query_wrap {
+  width: calc(100% - 60px);
+  height: 40px;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_query_wrap::before {
+  width: 40px;
+  height: 40px;
+  background-size: 28px 28px;
+  margin-right: 10px;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_submit {
+  width: 60px;
+  height: 40px;
+  font-size: 1.4rem;
+  padding: 0;
+}
+.p-cmn-search_form .mf_finder_header .mf_finder_searchBox_form .mf_finder_searchBox_suggest_items {
+  top: 40px;
+}
+}
